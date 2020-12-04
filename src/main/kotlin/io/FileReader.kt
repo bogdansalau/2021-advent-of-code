@@ -8,5 +8,10 @@ fun readArray(file: String): List<Int> {
         .map { try { it.toInt() } catch (e: NumberFormatException) { Integer.MAX_VALUE } }
 }
 
+fun readStringArray(file: String): List<String> {
+    return readFileDirectlyAsText(file)
+        .split("\n")
+}
+
 fun readFileDirectlyAsText(fileName: String): String
         = File(fileName).readText(Charsets.UTF_8)

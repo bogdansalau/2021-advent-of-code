@@ -1,8 +1,7 @@
-import day1.findTriple
-import io.readArray
+import day2.countValidPasswords
+import io.readFileDirectlyAsText
 
 fun main() {
-    val inputArray = readArray("day1\\input.txt")
-    val triple = findTriple(2020, inputArray)
-    println(triple.first*triple.second*triple.third)
+    val inputStr = readFileDirectlyAsText("day2\\input.txt")
+    println(countValidPasswords(inputStr))
 }
