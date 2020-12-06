@@ -1,11 +1,9 @@
-import day3.countTrees
-import day4.countValidPassports
-import io.readFileDirectlyAsText
+import day5.findHighestSeat
 import io.readStringArray
 
 fun main() {
-    val inputStr = readFileDirectlyAsText("day4\\input.txt")
-    println(countValidPassports(inputStr))
+    val inputStr = readStringArray("day5\\input.txt")
+    findHighestSeat(inputStr)
 
     // 63, 181, 55, 67, 30
 }
