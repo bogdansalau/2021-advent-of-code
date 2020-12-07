@@ -59,7 +59,9 @@ fun countValidPassports(passwords: String): Int {
 }
 
 fun validateFields(pass: Passport): Boolean {
-    return isValidByr(pass) && isValidIyr(pass) && isValidEyr(pass) && isValidHgt(pass) && isValidHcl(pass) && isValidEcl(pass) && isValidPid(pass)
+    return isValidByr(pass) && isValidIyr(pass) && isValidEyr(pass) && isValidHgt(pass) && isValidHcl(pass) && isValidEcl(
+        pass
+    ) && isValidPid(pass)
 }
 
 private fun isValidByr(pass: Passport): Boolean {
@@ -70,11 +72,11 @@ private fun isValidIyr(pass: Passport): Boolean {
     return pass.iyr!! >= 2010 && pass.iyr <= 2020
 }
 
-fun isValidEyr(pass: Passport): Boolean {
+private fun isValidEyr(pass: Passport): Boolean {
     return pass.eyr!! >= 2020 && pass.eyr <= 2030
 }
 
-fun isValidHgt(pass: Passport): Boolean {
+private fun isValidHgt(pass: Passport): Boolean {
     if (pass.hgt!!.endsWith("cm")) {
         val hgt: Int = try {
             pass.hgt.filterNot { it == 'c' || it == 'm' }.toInt()
@@ -92,16 +94,16 @@ fun isValidHgt(pass: Passport): Boolean {
     } else return false
 }
 
-fun isValidHcl(pass: Passport): Boolean {
+private fun isValidHcl(pass: Passport): Boolean {
     val i = pass.hcl!!.map { it.isLetterOrDigit() }.filter { it }.count()
     return pass.hcl!![0] == '#' && i == 6
 }
 
-fun isValidEcl(pass: Passport): Boolean {
+private fun isValidEcl(pass: Passport): Boolean {
     return pass.ecl == "amb" || pass.ecl == "blu" || pass.ecl == "brn" || pass.ecl == "gry" || pass.ecl == "grn" || pass.ecl == "hzl" || pass.ecl == "oth"
 }
 
-fun isValidPid(pass: Passport): Boolean {
+private fun isValidPid(pass: Passport): Boolean {
     val i = pass.pid!!.map { it.isDigit() }.count()
     return i == 9
 }

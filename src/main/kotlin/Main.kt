@@ -1,9 +1,9 @@
-import day5.findHighestSeat
-import io.readStringArray
+import day6.countQuestions
+import io.readFileDirectlyAsText
 
 fun main() {
-    val inputStr = readStringArray("day5\\input.txt")
-    findHighestSeat(inputStr)
+    val inputStr = readFileDirectlyAsText("day6\\input.txt")
+    println(countQuestions(inputStr))
 
     // 63, 181, 55, 67, 30
 }
