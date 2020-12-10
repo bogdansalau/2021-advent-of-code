@@ -1,9 +1,12 @@
-import day6.countQuestions
-import io.readFileDirectlyAsText
+import day7.HandyHaversacks
+import io.readStringArray
 
 fun main() {
-    val inputStr = readFileDirectlyAsText("day6\\input.txt")
-    println(countQuestions(inputStr))
+    val inputStr = readStringArray("day7\\input.txt")
+    val day7 = HandyHaversacks(inputStr)
+    day7.solvePart2().print()
+}
 
-    // 63, 181, 55, 67, 30
+fun Int.print() {
+    print(this)
 }

@@ -32,16 +32,8 @@ package day5
  * Every seat also has a unique seat ID: multiply the row by 8, then add the column.
  * In this example, the seat has ID 44 * 8 + 5 = 357.
  */
-fun findHighestSeat(boardingPasses: List<String>) {
-    val list = boardingPasses.map { findSeatId(it) }.toList().sorted()
-    var missingElement: Int = 0
-    list.forEach lit@{ if (!list.contains(it + 1) && list.contains(it + 2)) {
-        missingElement = it + 1
-        return@lit
-    } }
-
-    println("Highest id in the array is ${boardingPasses.map { findSeatId(it) }.maxByOrNull { it }}")
-    println("The missing element in the array is $missingElement")
+fun findHighestSeat(boardingPasses: List<String>): Int? {
+    return boardingPasses.map { findSeatId(it) }.toList().maxByOrNull { it }
 }
 
 private fun findSeatId(pass: String): Int {
