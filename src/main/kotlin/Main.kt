@@ -1,12 +1,10 @@
-import day7.HandyHaversacks
+import day8.HandheldHalting
 import io.readStringArray
+import util.print
+import util.println
 
 fun main() {
-    val inputStr = readStringArray("day7\\input.txt")
-    val day7 = HandyHaversacks(inputStr)
+    val inputStr = readStringArray("day8\\input.txt")
+    val day7 = HandheldHalting(inputStr)
     day7.solvePart2().print()
-}
-
-fun Int.print() {
-    print(this)
 }
