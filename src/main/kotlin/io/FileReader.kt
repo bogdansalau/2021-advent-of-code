@@ -5,7 +5,7 @@ import java.io.File
 fun readArray(file: String): List<Int> {
     return readFileDirectlyAsText(file)
         .trim()
-        .split("\n")
+        .split("\n") // add \r before \n if parsing doesn't work
         .map {
             try {
                 it.toInt()

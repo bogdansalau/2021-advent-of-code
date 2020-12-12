@@ -1,6 +1,6 @@
 package day0demo
 
-class Demo(input: List<String>) {
+class Demo(val input: List<String>) {
 
 
 
