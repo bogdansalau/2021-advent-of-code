@@ -1,13 +1,10 @@
-import day10.AdapterArray
-import day8.HandheldHalting
-import day9.EncodingError
-import io.readArray
+import day13.ShuttleSearch
 import io.readStringArray
-import util.print
 import util.println
 
 fun main() {
-    val inputStr = readArray("day10\\input.txt")
-    val day10 = AdapterArray(inputStr)
-    day10.solvePart2().print()
+    val inputStr = readStringArray("day13\\input.txt")
+    val day13 = ShuttleSearch(inputStr)
+    day13.solvePart2().println()
+
 }

@@ -1,11 +1,11 @@
 package util
 
-fun Int.print() {
-    print(this)
+fun Int.println() {
+    println(this)
 }
 
-fun Long.print() {
-    print(this)
+fun Long.println() {
+    println(this)
 }
 
 fun String.println() {
