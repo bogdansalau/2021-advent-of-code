@@ -20,29 +20,18 @@ class ShuttleSearch(val input: List<String>) {
     }
 
     fun solvePart2(): Long {
-        val busses = input[1].trim().split(",").map {
-            if (it == "x") 1
-            else it.toInt()
-        }
-        var time = 99999999999393L
-        var foundT = false
-        var offset = 68
-
-        while (!foundT) {
-            var allGood = true
-            var actualTime = time - offset
-            for (i in busses.indices) {
-                if(busses[i] == 733) println(i)
-                if((actualTime + i).rem(busses[i]) != 0L) {
-                    allGood = false
-                    break
-                }
+        val indexedBusses = input[1].trim().split(",").mapIndexedNotNull { index, s -> if (s == "x") null else IndexedBus(index, s.toLong()) }
+        var stepSize = indexedBusses.first().bus
+        var time = 0L
+        indexedBusses.drop(1).forEach { (offset, bus) ->
+            while ((time + offset) % bus != 0L) {
+                time += stepSize
             }
-            if (allGood) foundT = true
-            time += 733
-            println(time)
+            stepSize *= bus
         }
-        return time - 1
+        return time
     }
+
+    data class IndexedBus(val index: Int, val bus: Long)
 
 }
