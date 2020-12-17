@@ -1,16 +1,9 @@
-import day12.RainRisk
-import day13.ShuttleSearch
-import day14.DockingData
-import day15.RambunctiousRecitation
-import io.readStringArray
-import util.pow
+import day16.TicketTranslation
+import io.readFileDirectlyAsText
 import util.println
 
 fun main() {
-    val inputStr = readStringArray("day14\\input.txt")
-    val day14 = RambunctiousRecitation()
+    val inputStr = readFileDirectlyAsText("day16\\input.txt")
+    val day14 = TicketTranslation(inputStr)
     day14.solvePart2().println()
-
-
-//    println(2L.pow(2))
 }
