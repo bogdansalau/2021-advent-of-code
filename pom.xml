@@ -65,7 +65,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>1.4.10</version>
+            <version>1.4.21</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -78,5 +78,13 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.18.1</version>
+        </dependency>
     </dependencies>
 </project>
+
+<!--        testImplementation("org.assertj:assertj-core:3.18.1")-->
+<!--        testApi("org.junit.jupiter:junit-jupiter-engine:5.7.0")-->
