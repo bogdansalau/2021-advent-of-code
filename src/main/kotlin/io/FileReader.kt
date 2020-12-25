@@ -2,23 +2,10 @@ package io
 
 import java.io.File
 
-fun readArray(file: String): List<Int> {
-    return readFileDirectlyAsText(file)
-        .trim()
-        .split("\n") // add \r before \n if parsing doesn't work
-        .map {
-            try {
-                it.toInt()
-            } catch (e: NumberFormatException) {
-                Integer.MAX_VALUE
-            }
-        }
-}
-
-fun readStringArray(file: String): List<String> {
-    return readFileDirectlyAsText(file)
+fun readFileAsStringArray(file: String): List<String> {
+    return readFileAsString(file)
         .trim()
         .split("\n")
 }
 
-fun readFileDirectlyAsText(fileName: String): String = File(fileName).readText(Charsets.UTF_8)
+fun readFileAsString(fileName: String): String = File(fileName).readText(Charsets.UTF_8)

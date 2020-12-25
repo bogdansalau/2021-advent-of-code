@@ -1,12 +1,14 @@
-import day16.TicketTranslation
-import day17.ConwayCubes
-import day18.OperationOrder
-import io.readFileDirectlyAsText
-import io.readStringArray
+import day19.Day19
+import day19.MonsterMessages
+import io.readFileAsString
+import io.readFileAsStringArray
 import util.println
 
 fun main() {
-    val inputStr = readStringArray("day18\\input.txt")
-    val day = OperationOrder(listOf("2*3+4"))
+    val inputStr = readFileAsStringArray("day19\\input.txt")
+    val day = MonsterMessages(inputStr)
     day.solvePart2().println()
+
+
+
 }

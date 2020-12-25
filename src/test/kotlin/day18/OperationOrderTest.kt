@@ -1,6 +1,6 @@
 package day18
 
-import io.readStringArray
+import io.readFileAsStringArray
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -80,7 +80,7 @@ class OperationOrderTest {
         @Test
         fun `Actual answer`() {
             // Act
-            val answer = OperationOrder(readStringArray("day18\\input.txt")).solvePart1()
+            val answer = OperationOrder(readFileAsStringArray("day18\\input.txt")).solvePart1()
 
             // Assert
             assertThat(answer).isEqualTo(98_621_258_158_412)
@@ -132,7 +132,7 @@ class OperationOrderTest {
         @Test
         fun `Actual answer`() {
             // Act
-            val answer = OperationOrder(readStringArray("day18\\input.txt")).solvePart2()
+            val answer = OperationOrder(readFileAsStringArray("day18\\input.txt")).solvePart2()
 
             // Assert
             assertThat(answer).isEqualTo(241_216_538_527_890)
