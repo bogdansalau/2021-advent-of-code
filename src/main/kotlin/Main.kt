@@ -1,14 +1,10 @@
-import day19.Day19
-import day19.MonsterMessages
+import day20.JurassicJigsaw
 import io.readFileAsString
-import io.readFileAsStringArray
 import util.println
 
 fun main() {
-    val inputStr = readFileAsStringArray("day19\\input.txt")
-    val day = MonsterMessages(inputStr)
+    val inputStr = readFileAsString("day20\\input.txt")
+    val day = JurassicJigsaw(inputStr)
     day.solvePart2().println()
-
-
 
 }
