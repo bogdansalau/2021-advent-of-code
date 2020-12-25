@@ -1,10 +1,10 @@
-import day20.JurassicJigsaw
-import io.readFileAsString
+import day21.AllergenAssessment
+import io.readFileAsStringArray
 import util.println
 
 fun main() {
-    val inputStr = readFileAsString("day20\\input.txt")
-    val day = JurassicJigsaw(inputStr)
+    val inputStr = readFileAsStringArray("day21\\input.txt")
+    val day = AllergenAssessment(inputStr)
     day.solvePart2().println()
 
 }
