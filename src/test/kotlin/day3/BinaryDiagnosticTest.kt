@@ -133,8 +133,8 @@ internal class BinaryDiagnosticTest {
 
     @Test
     fun `official input part2`() {
-        val exampleInput = readFileAsStringArray("src\\test\\resources\\day3\\input.txt")
-        val binaryDiagnostic = BinaryDiagnostic(exampleInput)
+        val officialInput = readFileAsStringArray("src\\test\\resources\\day3\\input.txt")
+        val binaryDiagnostic = BinaryDiagnostic(officialInput)
 
         val result = binaryDiagnostic.solvePart2()
 

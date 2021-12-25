@@ -8,4 +8,4 @@ fun readFileAsStringArray(file: String): List<String> {
         .split("\r\n")
 }
 
-fun readFileAsString(fileName: String): String = File(fileName).readText(Charsets.UTF_8)
+fun readFileAsString(fileName: String): String = File(fileName).readText(Charsets.UTF_8).replace("\r\n", "\n")
