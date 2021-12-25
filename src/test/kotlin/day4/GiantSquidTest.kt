@@ -1,8 +1,6 @@
 package day4
 
-import day3.BinaryDiagnostic
 import io.readFileAsString
-import io.readFileAsStringArray
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import kotlin.test.assertFalse
@@ -131,7 +129,7 @@ internal class GiantSquidTest {
     }
 
     @Test
-    fun `official input part2`() {
+    fun `official input part1`() {
         val officialInput = readFileAsString("src\\test\\resources\\day4\\input.txt")
         val giantSquid = GiantSquid(officialInput)
 
@@ -141,5 +139,25 @@ internal class GiantSquidTest {
     }
 
     //    ----- Part 2
+
+    @Test
+    fun `example input part2`() {
+        val exampleInput = readFileAsString("src\\test\\resources\\day4\\example.txt")
+        val giantSquid = GiantSquid(exampleInput)
+
+        val result = giantSquid.solvePart2()
+
+        assertEquals(1924, result)
+    }
+
+    @Test
+    fun `official input part2`() {
+        val officialInput = readFileAsString("src\\test\\resources\\day4\\input.txt")
+        val giantSquid = GiantSquid(officialInput)
+
+        val result = giantSquid.solvePart2()
+
+        assertEquals(16168, result)
+    }
 
 }
